@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Data/Data.iml" filepath="$PROJECT_DIR$/Data/Data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Leetcode/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode/Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day01-HelloWorld/day01-HelloWorld.iml" filepath="$PROJECT_DIR$/day01-HelloWorld/day01-HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02-basic/day02-basic.iml" filepath="$PROJECT_DIR$/day02-basic/day02-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03-branchAndloop/day03-flow-control.iml" filepath="$PROJECT_DIR$/day03-branchAndloop/day03-flow-control.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06-oop/day06-oop.iml" filepath="$PROJECT_DIR$/day06-oop/day06-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day07-oop/day07-oop.iml" filepath="$PROJECT_DIR$/day07-oop/day07-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day08-oop/day08-oop.iml" filepath="$PROJECT_DIR$/day08-oop/day08-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day09-coreclasslibrary/day09-coreclasslibrary.iml" filepath="$PROJECT_DIR$/day09-coreclasslibrary/day09-coreclasslibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day10-interface/day10-interface.iml" filepath="$PROJECT_DIR$/day10-interface/day10-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day2-basic/day2-basic.iml" filepath="$PROJECT_DIR$/day2-basic/day2-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day4-array/day4-array.iml" filepath="$PROJECT_DIR$/day4-array/day4-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/day5-OOP.iml" filepath="$PROJECT_DIR$/untitled/day5-OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day5-oop/day5-oop.iml" filepath="$PROJECT_DIR$/day5-oop/day5-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day8-oop/day8-oop.iml" filepath="$PROJECT_DIR$/day8-oop/day8-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iday01-collection/iday01-collection.iml" filepath="$PROJECT_DIR$/iday01-collection/iday01-collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaseaiproject.iml" filepath="$PROJECT_DIR$/javaseaiproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youtube/youtube.iml" filepath="$PROJECT_DIR$/youtube/youtube.iml" />
+    </modules>
+  </component>
+</project>
