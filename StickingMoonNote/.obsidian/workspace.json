@@ -30,7 +30,54 @@
   "left": {
     "id": "0f1aae297f899618",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "4ab75c7cbbeacb9e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18e2494d2b0d1970",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "179175f239f543d4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "56352f9ea3de3a78",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 200
   },
@@ -128,15 +175,15 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "nutstore-sync:Start sync": false,
       "switcher:打开快速切换": false,
-      "nutstore-sync:Stop sync": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "nutstore-sync:Start sync": false,
+      "nutstore-sync:Stop sync": false
     }
   },
   "active": "d89e866c0aa28468",
