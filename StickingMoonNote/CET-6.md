@@ -1285,7 +1285,7 @@ Superstition （站在上面的）迷信
 Superstitious 迷信的
 
 Religion （re li jing）宗教
-
+- day 11
 -  大学
 Scholar （死靠了）有学问的人 学者
 Expert  专家 专门
@@ -1340,4 +1340,74 @@ mortal （ mou tou）致命的
 mortality 死亡率
 campus 大学校园
 campaign （肯拼）运动 战役
+
+- day 12
+- 范围 领域
+scope （cope解决） 范围 领域
+terrain （特别的 雨）地形
+realm （realm man ）领域 王国
+sphere （🐍 趴 here）范围 领域
+domain （主要做的）领域 范围
+hemisphere 半球
+atmosphere 大气层 气氛
+circumstance 环境
+surround v围绕 环绕
+surroundings n环境
+mood （moon d）情绪 心情
+moody 情绪多变的
+climate 环境 气候
+- Vers
+universe 宇宙
+universal 普遍的 广泛的
+widespread 普遍的 广泛的
+anniversary 周年纪念日
+annual 一年一次的
+diverse 各种各样的
+divert 使转向
+diversion 转移 转向
+converse 相反的
+conversely 相反地
+controversy n 争论
+contrary 相反的
+controversial 引起争论的
+conversation 谈话
+convert 改变 转变 改变宗教
+avert（一再的转） 防止 避免 躲避
+aversion 厌恶
+invert v倒转 颠倒
+inversion n倒置 颠倒
+reverse 相反的 反面的
+reversal n颠倒
+reversible 可以改变的
+adverse （一再的转）不利的 反面的
+adversary 对手 敌手
+versatile 多才多艺的
+verse 诗
+verbal（我不）口头的 言语的 
+vocal 嗓音的 发音的
+- 改革 发展novo创新
+innovate v创新 改革
+legend 创奇
+renovate（再次改革）修复 翻新
+renovation n修复
+evolve 进化 逐步演变
+evolution 进化 演变
+evolutionary 进化的
+involve 涉及 包含
+revolve 旋转
+revolution 革命 巨变
+revolt 反抗 起义 造反
+renaissance 复兴 
+revive 苏醒 使复苏
+vivid 生动的
+survive 幸存
+reform （改变形式）改革
+conform （共同的形式）符合 相一致
+uniform 校服 制服
+platform （平的 形式）平台 讲台
+formulate 公式 
+formulate （用公式说）确切表达
+formal 正式的
+inform （information）通知 告知
+perform 表演
 
