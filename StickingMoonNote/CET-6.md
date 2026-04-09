@@ -1387,7 +1387,7 @@ verbal（我不）口头的 言语的
 vocal 嗓音的 发音的
 - 改革 发展novo创新
 innovate v创新 改革
-legend 创奇
+legend 传奇
 renovate（再次改革）修复 翻新
 renovation n修复
 evolve 进化 逐步演变
@@ -1410,4 +1410,48 @@ formulate （用公式说）确切表达
 formal 正式的
 inform （information）通知 告知
 perform 表演
+
+- day 13
+- sp 看
+inspect 调查 研究
+inspector 调查员 检查员
+expect 期望 期盼
+expectancy 期望 期待
+longevity 寿命 长寿
+prolong 延长
+lengthy 长时间的
+aspect （看了一眼）方面 外表
+suspect （往下看）猜想 怀疑
+suspicion n怀疑
+suspicious 怀疑的 
+susceptible（下面cept拿捏）易受影响的
+accept （一再 拿着）接受
+spectator 观众
+respect （重复看）尊重
+respective 各自的 分别的
+spectacular 壮丽的 宏伟的
+spectacle 壮观的场面
+prosperity 兴旺 繁荣
+prosperous 繁荣的 兴旺的
+spectrum （看 戳目）光谱
+conspicuous （所有人都看得见）明显的
+despise （往下看）鄙视 蔑视
+scorn 轻视 鄙视
+perspective （每一面都看）观点看法=idea、opinion
+stance 立场 观点
+standpoint 观点立场
+substance 物质 本质
+stereotype （st街上 er人 type 类型）老一套 刻板印象
+prototype 原型 雏形（pro先前的）
+speculate(看完过了一会) 推测 猜测 
+articulate（艺术的手段） 清晰地表达 清晰的
+prospect （往前看）可能性 希望
+prospective 有望的 预期的
+retrospect （往回看）回顾
+- 描述
+ portray 描写 描绘
+ sculpture 雕像
+ carve（cave山洞）雕刻
+ describe （de往下 scribe写）描述
+ depict描述 
 
