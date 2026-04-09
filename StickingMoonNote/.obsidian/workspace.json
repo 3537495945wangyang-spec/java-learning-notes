@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "9ae9f29cc9916b42",
@@ -189,9 +188,10 @@
   },
   "active": "d89e866c0aa28468",
   "lastOpenFiles": [
-    "CET-6.md",
-    "未命名.base",
     "未命名.canvas",
+    "未命名.base",
+    "未命名",
+    "CET-6.md",
     "Data Structure and Algorithms..md",
     "Data Structure and Algorithms.md",
     "欢迎.md",
