@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CET-6.md",
+                "file": "JavaSE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CET-6"
+              "title": "JavaSE"
+            }
+          },
+          {
+            "id": "23ff58198ce3370e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ],
@@ -96,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CET-6.md",
+                "file": "JavaSE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +116,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "CET-6 的反向链接列表"
+              "title": "JavaSE 的反向链接列表"
             }
           },
           {
@@ -189,17 +199,17 @@
   },
   "active": "d89e866c0aa28468",
   "lastOpenFiles": [
-    "未命名.canvas",
-    "未命名.base",
-    "未命名",
+    "JavaSE.md",
     "CET-6.md",
+    "未命名.base",
+    "未命名.canvas",
+    "未命名",
     "Data Structure and Algorithms..md",
     "Data Structure and Algorithms.md",
     "欢迎.md",
     "Sharpen your thinking..md",
     "未命名 1.base",
     "未命名 2.base",
-    "JavaSE.md",
     "未命名 1.md"
   ]
 }

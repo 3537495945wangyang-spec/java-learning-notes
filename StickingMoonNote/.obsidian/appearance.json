@@ -2,7 +2,7 @@
   "accentColor": "",
   "cssTheme": "Dune",
   "theme": "moonstone",
-  "baseFontSize": 30,
+  "baseFontSize": 24,
   "baseFontSizeAction": true,
   "monospaceFontFamily": "Cambria Math",
   "nativeMenus": false,
