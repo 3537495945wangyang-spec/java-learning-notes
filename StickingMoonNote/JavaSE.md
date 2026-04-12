@@ -445,8 +445,8 @@ for(Ccar c : cars){
   c.drive();  
 }
 ```
-
-- this谁引用它，它就指代谁
+## extend继承
+- ==this谁引用它，它就指代谁
 	哪个对象调用这个方法，this就拿到哪个对象
 	- 区分成员变量与局部变量
 		```java
@@ -454,11 +454,22 @@ for(Ccar c : cars){
         this.name = name; // this.name 是成员变量，name 是构造器参数
 	    }```
 	    ```
-	- 调用当前类的其他构造方法
+	- 调用当前类的其他构造方法（兄弟构造器）
 		```java
-		```public Person() {
-        this("未知", 0); // 调用有参构造方法，必须在第一行
-	    }```
+		```public Teacher (String name,int age,String subject){  
+		    //this调用兄弟构造器，必须写在构造器的第一行  
+		    this(name,age,subject,"gdut");  
+		}  
+  
+  
+		public Teacher(String name, int age, String subject, 
+			String university) {  
+		    super();  
+		    this.name = name;  
+		    this.age = age;  
+		    this.subject = subject;  
+		    this.university=university;  
+			}```
 	    ```
 	- 返回当前对象（链式调用）
 		```java
@@ -471,7 +482,73 @@ for(Ccar c : cars){
 	    }
 	    new Person().setName("张三").print();```
 	    ```
-
+- ==super关键字
+	- 调用父类构造方法
+		```java
+		```public Teacher(String name, char sex) {
+	    super(name, sex); // 调用 People(String, char)
+		}```
+		```
+	- 子类无参构造器如果父类有无参构造器时就可以正常写，父类==**没有无参构造器**==时需要super（“”，‘’） 
+	- 父类没有==**任何无参构造器或者写了无参构造器**==的情况下，子类会有默认的无参构造器
+	- 访问父类的成员变量
+		```java
+		```public Teacher(String name) {
+        super.name = name; // 访问父类的 name
+        this.name = name;  // 子类的 name
+	    }```
+	    ```
+	- 调用父类的成员方法
+		```java
+		```public void show() {
+        super.show(); // 调用父类的 show
+        System.out.println("Teacher");
+	    }```
+	    ```
+- 修饰符
+	- - ==private
+	    - 只能在==当前类==中访问
+	    - 封装性最强，最常用在成员变量上
+	    - 一般通过 getter / setter 对外提供访问
+        
+	- ==缺省(default)  
+	    - 不使用任何修饰符
+	    - 仅限==同一包==内访问
+	    - 不同包的子类也无法访问
+    
+	- ==protected
+	    - 同一包内可访问 
+	    - ==不同包下的子类==也可访问
+	    - 常用于“希望子类使用，但不对外开放”的成员
+        
+	- ==public
+	    - ==任何地方==都可以访问
+	    - 封装性最弱
+	    - 多用于对外接口、方法（如 getter / setter）
+	    -
+- 多态
+	- 对于成员变量，静态方法 编译看左边，运行看左边
+	```java
+		```System.out.println(h1.name);
+		//成员变量：编译看左边，运行也看左边```
+	```
+	- 对于方法（重写）编译看左边，运行看右边
+		编译器会在hero里面找live方法，jvm运行时拿到的是doubleC
+		```java
+		```Hero h1 = new DoubleC();  
+		h1.live();
+		```
+	- 父类调用子类特有的方法或者变量时
+	```java
+		```if (h instanceof DoubleC dc) {//判断类型同时强转
+	    dc.zuoLao();
+	    System.out.println(dc.skill);
+		}```
+		if (h instanceof DoubleC) {//先判断类型 再进行强转
+	    DoubleC dc = (DoubleC) h;
+	    dc.zuoLao();
+		}
+	```
 ## static
 属于类而不属于任何对象,由类拥有，所有对象都可以访问
 ```java
