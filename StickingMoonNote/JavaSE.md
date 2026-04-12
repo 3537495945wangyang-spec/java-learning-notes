@@ -243,8 +243,10 @@ for(int i = 1;i<=rows;i++){
 >2 demonstrate array = an array of arrays
 ```java
 String[] cars = {"ss","fsd","sff"};
-String{} ages = new String[3];
-String[] cars = student[1];//定义一个新数组拿出原来二维数组中的一行
+String[] ages = new String[3];
+String[] cars = student[1];//
+
+义一个新数组拿出原来二维数组中的一行
 ```
 ``
 - 数组的**复制 **
@@ -254,11 +256,9 @@ int [] arrays = {4,30,34,7,12,2};
 int [] arrays1 = arrays;  
 // 不是复制，只是让 arrays1和arrays 指向同一个数组
   
-  
 int[] arrays2 = new  int[arrays.length];  
 //                               原数组  原起始位置  后数组  后起始位置  长度  
 System.arraycopy(arrays,             0,        arrays2,          0,     arrays.length);  
-  
 import java.util.Arrays;
 int[] array4 = Arrays.copyOf(arrays,arrays.length);  
 //自动创建新数组 只能从零开始 需要导入arraysAPI
