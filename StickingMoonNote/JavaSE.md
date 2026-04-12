@@ -407,7 +407,7 @@ for(String animal : animals){
 3. overload 相同名字，不同参数  
 
 ## object oriented programming
-> 对象可以保存数据（属性）执行操作（方法）
+-  对象可以保存数据（属性）执行操作（方法）
 > 是一种引用数据类型reference data
 
 ```java
@@ -430,10 +430,10 @@ void brake(){
 }
 ```
 
-### constructor
->创建构造函数
->overload constructor
->array of objects
+- 创建构造函数
+> overload constructor
+> array of objects
+> 构造器的格式 仅需要一个public 加上一模一样的类名称
 
 ```java
 Ccar[] cars = new Ccar[]{  
@@ -445,6 +445,32 @@ for(Ccar c : cars){
   c.drive();  
 }
 ```
+
+- this谁引用它，它就指代谁
+	哪个对象调用这个方法，this就拿到哪个对象
+	- 区分成员变量与局部变量
+		```java
+		```public Person(String name) {
+        this.name = name; // this.name 是成员变量，name 是构造器参数
+	    }```
+	    ```
+	- 调用当前类的其他构造方法
+		```java
+		```public Person() {
+        this("未知", 0); // 调用有参构造方法，必须在第一行
+	    }```
+	    ```
+	- 返回当前对象（链式调用）
+		```java
+		```public Person setName(String name) {
+        this.name = name;
+        return this; // 返回当前对象
+	    }
+	    public void print() {
+        System.out.println(name);
+	    }
+	    new Person().setName("张三").print();```
+	    ```
 
 ## static
 属于类而不属于任何对象,由类拥有，所有对象都可以访问
