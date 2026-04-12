@@ -237,14 +237,96 @@ for(int i = 1;i<=rows;i++){
 }
 ```
 
-## Array
+## **==Array==**
 > used to store multiple values in a single variable
 > 存储单个变量中的多个值
 >2 demonstrate array = an array of arrays
+```java
+String[] cars = {"ss","fsd","sff"};
+String{} ages = new String[3];
+String[] cars = student[1];//定义一个新数组拿出原来二维数组中的一行
+```
+``
+- 数组的**复制 **
+```java
+int [] arrays = {4,30,34,7,12,2};  
+//数组的复制  
+int [] arrays1 = arrays;  
+// 不是复制，只是让 arrays1和arrays 指向同一个数组
+  
+  
+int[] arrays2 = new  int[arrays.length];  
+//                               原数组  原起始位置  后数组  后起始位置  长度  
+System.arraycopy(arrays,             0,        arrays2,          0,     arrays.length);  
+  
+import java.util.Arrays;
+int[] array4 = Arrays.copyOf(arrays,arrays.length);  
+//自动创建新数组 只能从零开始 需要导入arraysAPI
+```
 
-`String[] cars = {"mi","S,"T"}`
-`String[] cars = new String[3]; `
-`String[][] cars = new String[3][3]; `
+- 数组的排序
+	-    Arrays.sort(arr)是对整个数组排序的简写；
+		Arrays.sort(arr, 0, arr.length)是区间排序的特例；（有可能出现数组索引越界的问题）
+		**两者结果相同，但语义不同，后者更灵活，前者更简洁安全。**
+- 数组的比较
+	-  (a.equals(b));//比较的是地址 
+	- Arrays.equals(a,b));//比较的是内容  
+		- Arrays.equals()对基本类型数组直接比值（int double）
+			对于自己创建的==对象数组 需要重写equals==
+			不然对象默认equals等价于=
+			**String**可以直接使用是因为**已经重写**过了
+	- Arrays.deepEquals(a, b)//比较多维数组
+	```java
+		int[][] d = new int[2][2];  
+		int[][] e = new int[2][2];  
+		for (int j = 0; j <d.length ; j++) {  
+		Arrays.fill(d[j],45);  
+		}  
+		for (int jj = 0; jj <e.length ; jj++) {  
+		Arrays.fill(e[jj],45);  
+		}  
+		System.out.println(Arrays.deepEquals(d,e));
+		//比较整个多维数组true
+		System.out.println(Arrays.equals(d,e));
+		//仅比较第一行而且是“==”false
+	```
+- 数组的填充
+	- 一维数组的填充
+		```java
+		```int[] a = new int[5];
+		Arrays.fill(a, 45);
+		int[] a = new int[5];
+		Arrays.fill(a, 1, 4, 99);//左闭右开```
+		```
+	- 二维数组的填充
+		```java
+		//遍历，逐行填充
+		```for (int i = 0; i < d.length; i++) {
+	    Arrays.fill(d[i], 45);}```
+		//增强for循环写法
+	    for (int[] row : d) {
+	    Arrays.fill(row, 45);
+		}
+	    ```
+	- 对象数组的填充
+		不能直接使用fill这样每个位置填进去的是同一个对象，一个改变之后就都会发生改变
+		```java
+		```for (int i = 0; i < s.length; i++) {
+		    s[i] = new Student();}```
+		```
+- 增强for循环
+		- 一维数组
+		int[] arr = {1, 2, 3, 4};
+		for (int num : arr) {
+	    System.out.println(num);}
+		- 二维数组
+		for (int[] row : matrix) {
+	    for (int num : row) {
+        System.out.print(num + " ");
+	    }
+		适合使用于遍历元素，只有对象内容可以修改 基本类型不能修改内容
+    
+		
 ## String
 ```java
  String name = "  Stick  ";  
