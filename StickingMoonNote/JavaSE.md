@@ -31,8 +31,8 @@ y = temp;
          char
     小范围类型自动转换为大范围类型，无需显示声明
 	自动转换的场景
-	    - **赋值时**：double d = 100;  `（int → double）
-		- **方法调用时**：Math.sqrt(25);  `（int → double）
+	    - **赋值时**：double d = 100; （int → double）
+		- **方法调用时**：Math.sqrt(25);  （int → double）
 		- **表达式计算时**：不同类型运算，自动向大类型转换
 		- **返回值**：方法返回时自动转换
 	强制转换的风险
@@ -606,3 +606,19 @@ public static int  getmax(int a,int b,int c)  {
     return max ;  
 }
   ```
+
+## equals方法
+```java
+```@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Person person = (Person) o;
+    return id == person.id &&
+           Objects.equals(name, person.name );
+}```
+@Override
+public int hashCode() {
+    return Objects.hash(id, name);
+}
+```
