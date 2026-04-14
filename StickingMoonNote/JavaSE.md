@@ -34,6 +34,10 @@ y = temp;
 	    - **赋值时**：double d = 100; （int → double）
 		- **方法调用时**：Math.sqrt(25);  （int → double）
 		- **表达式计算时**：不同类型运算，自动向大类型转换
+		- char类型可以自动转换为int反过来不行
+			-  char c = 'a' ; int i = 66;
+			 int n = i+c ;√
+			 c = n ;×
 		- **返回值**：方法返回时自动转换
 	强制转换的风险
 		精度丢失（浮点数 → 整数）
@@ -85,7 +89,20 @@ byte b = (byte) negative;  // -126
 	```
 ## expression 表达式 
 1. 加减乘除
+2. 进行**加法**因为加号也可以作为字符串对象的连接，如果一个字符串类型加一个其他数据类型会自动将其他数据类型转为字符串
+3. 进行**除法**时，如果除数或者被除数出现浮点数则结果是浮点数
+4. 取%**余数时如果出现负数** 规则是余数的符号与被除数相同且余数的绝对值小于除数的（==可以直接把负号去掉进行计算，再通过被除数的符号考虑加上符号==）
+5. 位运算符
+	1. &（按位与）：两位都为1，结果才为1；
+	2. |（按位或）：有一位为1，结果就为1；
+	3. ^（按位异或）：两位不同为1，相同为0；
+	4. ~（按位取反）：0变1，1变0；
+	5. <<（左移）：左移指定位数，低位补0；
+	6. （右移）：右移，保留符号位；（整数为0，负数为1）
+	7. （无符号右移）：右移，左边补0。
 - 简单写法
+		前自增 先加1再使用该变量
+		后自增先使用该变量再加1
 `friends++；friends--；`
 - 使用除法的时候，因为除不尽会忽略小数部分，如果要保留就得强转为double类型
 `double friends = 10; friends = (double) friends/3;`
@@ -130,6 +147,7 @@ boolean y = random.nextBoolean();
 ## if statement
 perform a block of code if it's condition evaluates to be true
 展示一部分代码当条件为真的时候 
+- 如果if或else花括号中只有一条语句可以省略花括号
 ## Switch
 statement that allows a variable to be tested for equality against a list of values
 替代多个if语句 开关有多种可能匹配的值
@@ -140,6 +158,7 @@ String day = "Friday";
 switch (day){  
     case "Monday":  
         System.out.println("Today is Monday");  
+     //case "Monday" -> System.out.println("Today is Monday");  
   break;  
   case "Tuesday":  
         System.out.println("Today is Tuesday");  
@@ -154,6 +173,30 @@ switch (day){
         System.out.println("Today is Friday,i love it");
   default:
 			  System.out.println("That is not a day");
+```
+- 多值匹配 箭头写法不会贯穿,==同时可以完成赋值==
+```java
+```String type = switch (day) {
+    case 1, 2, 3, 4, 5 -> "工作日";
+    case 6, 7 -> "周末";
+    default -> "无效日期";
+};```
+```
+- 当case里面有多个语句时 用yield返回结果
+	- yield需要在大括号中使用，需要有default条件
+	- return会直接跳出当前方法或者循环，yield只会跳出Switch块
+```java
+```int score = 85;
+String level = switch (score / 10) {
+    case 10, 9 -> "优秀";
+    case 8 -> {
+        System.out.println("良好");
+        yield "良好";
+    }
+    case 7 -> "中等";
+    case 6 -> "及格";
+    default -> "不及格";
+};```
 ```
 ## & and | and !逻辑运算符
 1. && both condition must be true
@@ -216,6 +259,7 @@ for(int i = 0;i<=10;i++){
 	System.out.println(i);
 }
 ```
+可以有多个变量，中间用逗号分割
 4. 循环嵌套 
 >nested loops = a loop inside of a loop
 
@@ -236,7 +280,30 @@ for(int i = 1;i<=rows;i++){
   }  
 }
 ```
-
+5. break跳出循环 带标签的可以跳出循环结构或者语句块
+```java
+```outer:
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        if (i == 2 && j == 2) {
+            break outer; // 直接跳出 outer 标签的循环
+        }
+        System.out.println(i + "," + j);
+    }
+}```
+```
+6. continue 终止当前的迭代，从下次迭代开始
+```java
+```outer:
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        if (i == 2 && j == 2) {
+            continue outer;
+        }
+        System.out.println(i + "," + j);
+    }
+}```
+```
 ## **==Array==**
 > used to store multiple values in a single variable
 > 存储单个变量中的多个值
@@ -328,6 +395,15 @@ int[] array4 = Arrays.copyOf(arrays,arrays.length);
     
 		
 ## String
+- 字符串字面值不可以分在两行来写 但可以用+链接
+	```java
+	```String s = "我爱Java" 
+				“怎么可能”;  ❌️
+	String s =  "我爱Java" +
+				“怎么可能”;  ✅️
+				
+	```
+- 常用String方法		
 ```java
  String name = "  Stick  ";  
 boolean result = name.equals("Stick");  
@@ -409,7 +485,11 @@ for(String animal : animals){
 ## object oriented programming
 -  对象可以保存数据（属性）执行操作（方法）
 > 是一种引用数据类型reference data
-
+- 可复用 可拓展 易维护
+- 栈内存存储局部变量以及方法先进后出（枯井）
+- 堆内存存储创建的对象以及数组（餐厅）
+- 方法区内存static代码
+![[1776174978471.jpg]]
 ```java
 String make = "Ford福特";  
 int year = 2026;  
@@ -430,10 +510,49 @@ void brake(){
 }
 ```
 
+- 方法调用
+	- 对象调用类的实例方法
+	- 类中的方法调用本类中的其他方法
+	- 类名直接调用static方法
 - 创建构造函数
 > overload constructor
 > array of objects
 > 构造器的格式 仅需要一个public 加上一模一样的类名称
+- 方法参数传递时
+	- 基本数据类型，若在方法中被修改了，在方法返回时值依旧不会改变（如果是不可变引用对象如string类则不会改变）
+	- 引用数据类型，对象的状态可能会改变，引用不能改变
+		将person看作电视机 p就是遥控器
+		- 单纯改变p就是调节电视机 改变对象状态
+		- new一个person就是创建一个新的电视机，对原来没有影响
+	```java
+	```static void change(Person p) {
+    p = new Person(); // ❌ 只改了局部变量
+    p.age = 50;//新建了一个对象，后面的修改就是对新建的对象副本进行的修改不会影响原来传入的对象
+	}
+
+	public static void main(String[] args) {
+    Person person = new Person();
+    person.age = 20;
+    change(person);
+    System.out.println(person.age); // 20
+	}```
+	```
+	```java
+	```class Person {
+    int age;
+	}
+	public class Test {
+    static void change(Person p) {
+        p.age = 30; // ✅ 修改对象状态
+    }
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.age = 20;
+        change(person);
+        System.out.println(person.age); // 30
+    }
+	}```
+	```
 
 ```java
 Ccar[] cars = new Ccar[]{  
@@ -448,7 +567,7 @@ for(Ccar c : cars){
 ## extend继承
 - ==this谁引用它，它就指代谁
 	哪个对象调用这个方法，this就拿到哪个对象
-	- 区分成员变量与局部变量
+	- 区分成员变量与局部变量  区分方法参数与成员变量
 		```java
 		```public Person(String name) {
         this.name = name; // this.name 是成员变量，name 是构造器参数
@@ -551,8 +670,11 @@ for(Ccar c : cars){
 	```
 ## static
 属于类而不属于任何对象,由类拥有，所有对象都可以访问
+- 静态变量可以通过**类名访问**也可以通过**实例名**访问
+- 静态方法只能使用静态变量只能调用静态方法
 ```java
-String nama;  
+public class Friends{
+String name;  
 static int numOfFriends;  
   
 Friends(String name) {  
@@ -562,15 +684,48 @@ Friends(String name) {
 static void printNumOfFriends(){  
     System.out.println("You have " + numOfFriends + " friends");  
 }
-
+}
 Friends f1 = new Friends("Spongebob");  
 Friends f2 = new Friends("Patrick");  
 Friends f3 = new Friends("Sandy");  
   
 System.out.println(Friends.numOfFriends);
 ```
+- 静态工厂方法
+	- 是用 `static`修饰的、返回该类实例的方法，用来**创建对象**。
+	```java
+	```class Person {
+    private String name;
 
+    private Person(String name) {
+        this.name = name;
+    }
 
+    public static Person create(String name) {
+        return new Person(name);
+    }
+	}```
+	```
+- 递归算法
+	
+	先一路向下算到最底层，
+	再一路向上把结果一层层传回来
+	```java
+	```public class Fibonacci {
+    public static int fib(int n) {
+        if (n == 2) {
+            return 1;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        return fib(n - 1) + fib(n - 2);
+    }
+    public static void main(String[] args) {
+        System.out.println(fib(10)); // 55
+    }
+	}```
+	```
 ## 方法重载
  方法重载的核心规则
 方法重载的依据是**参数列表的不同**，具体包括：
@@ -580,13 +735,7 @@ System.out.println(Friends.numOfFriends);
 > ⚠️ 注意：**仅返回值类型不同**​ 不能构成重载，编译器会报错。
 - **返回类型和访问修饰符**可以不同
 
-## 运算符operator
-```java
-money += money+b;
-//money=money+money+b
-```
-
-### 三元运算符
+## 三元运算符
 - 基本语法
 ```
 条件表达式 ? 表达式1 : 表达式2
